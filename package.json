@@ -1,6 +1,6 @@
 {
   "name": "peer-connection",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A nicer peer connection api",
   "keywords": [
     "webrtc",
