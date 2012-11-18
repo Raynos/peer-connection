@@ -2,7 +2,16 @@
   "name": "peer-connection",
   "version": "0.1.0",
   "description": "A nicer peer connection api",
-  "keywords": [],
+  "keywords": [
+    "webrtc",
+    "p2p",
+    "peer",
+    "real-time",
+    "realtime",
+    "real",
+    "time",
+    "peer2peer"
+  ],
   "author": "Raynos <raynos2@gmail.com>",
   "repository": "git://github.com/Raynos/peer-connection.git",
   "main": "index",
@@ -20,7 +29,8 @@
     "data-channel": "~0.1.1"
   },
   "devDependencies": {
-    "tap": "~0.3.1"
+    "tap": "~0.3.1",
+    "browserify-server": "~2.0.4"
   },
   "licenses": [
     {
