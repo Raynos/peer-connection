@@ -12,6 +12,7 @@ function PeerConnection(RTCPeerConnection, options) {
     pc.setRemote = setRemote
     pc.addCandidate = addCandidate
     pc.connect = connect
+    pc.setLocal = setLocal
 
     _pc.onicecandidate = function (candidate) {
         pc.emit("candidate", candidate)
@@ -19,6 +20,10 @@ function PeerConnection(RTCPeerConnection, options) {
 
     _pc.ondatachannel = function (channel) {
         pc.emit("connection", DataChannel(channel))
+    }
+
+    _pc.onopen = function () {
+        pc.emit("open")
     }
 
     return pc
@@ -40,6 +45,10 @@ function PeerConnection(RTCPeerConnection, options) {
         } else {
             call(_pc.createAnswer, callback)
         }
+    }
+
+    function setLocal(description) {
+        _pc.setLocalDescription(description)
     }
 
     function setRemote(description) {
