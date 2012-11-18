@@ -19,7 +19,7 @@ function PeerConnection(RTCPeerConnection, options) {
     }
 
     _pc.ondatachannel = function (channel) {
-        pc.emit("connection", DataChannel(channel))
+        pc.emit("connection", DataChannel(channel.channel))
     }
 
     _pc.onopen = function () {
