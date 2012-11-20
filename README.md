@@ -11,14 +11,14 @@ var PeerConnection = require("peer-connection")
     , signal = someSignalChannel()
 
 // Either use the shim to open a peer connection
-var pc = PeerConnection(shim, {
+var pc = PeerConnection(shim({
     uri: "http://discoverynetwork.co"
-})
+}))
 
 // or use the real deal
-var pc = PeerConnection(realDeal, {
+var pc = PeerConnection(realDeal({
     iceServers: [...]
-})
+}))
 
 // Get a pair of peer connections
 var pc1, pc2 = ...

@@ -3,9 +3,8 @@ var EventEmitter = require("events").EventEmitter
 
 module.exports = PeerConnection
 
-function PeerConnection(RTCPeerConnection, options) {
+function PeerConnection(_pc) {
     var pc = new EventEmitter()
-        , _pc = RTCPeerConnection(options)
 
     pc.createAnswer = createAnswer
     pc.createOffer = createOffer
