@@ -43,7 +43,7 @@ pc2.on("connection", function (stream) {
     ...
 })
 
-var stream = pc1.connect("some label")
+var stream = pc1.createStream("some label")
 stream.write("hello world!")
 ```
 
