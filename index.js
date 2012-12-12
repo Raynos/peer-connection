@@ -10,7 +10,7 @@ function PeerConnection(_pc) {
     pc.createOffer = createOffer
     pc.setRemote = setRemote
     pc.addCandidate = addCandidate
-    pc.connect = connect
+    pc.createStream = createStream
     pc.setLocal = setLocal
 
     _pc.onicecandidate = function (candidate) {
@@ -58,7 +58,7 @@ function PeerConnection(_pc) {
         _pc.addIceCandidate(candidate)
     }
 
-    function connect(meta) {
+    function createStream(meta) {
         return DataChannel(_pc.createDataChannel(meta))
     }
 
